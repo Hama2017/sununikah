@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas">
       <Container className="relative flex h-20 items-center justify-between gap-4">
-        <Link href={AppRoute.Home} aria-label="Accueil SunuNikah">
+        <Link href={AppRoute.Home} aria-label="Accueil SunuNikah" className="shrink-0">
           <Logo className="h-12 w-auto" preload />
         </Link>
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
@@ -25,9 +25,9 @@ export function Header() {
           <LinkButton href={AppRoute.SignIn} variant={ButtonVariant.Tertiary}>
             Se connecter
           </LinkButton>
-          <LinkButton href={AppRoute.SignUp} className="hidden md:inline-flex">
-            Créer mon profil
-          </LinkButton>
+          <div className="hidden md:block">
+            <LinkButton href={AppRoute.SignUp}>Créer mon profil</LinkButton>
+          </div>
           <MobileMenu />
         </div>
       </Container>

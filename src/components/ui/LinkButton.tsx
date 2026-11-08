@@ -4,7 +4,7 @@ import { ButtonVariant } from "@/enums/ui.enum";
 import { cn } from "@/lib/cn";
 
 const BASE_CLASSES =
-  "inline-flex items-center justify-center gap-2 text-label-lg transition-colors";
+  "inline-flex items-center justify-center gap-2 text-label-lg whitespace-nowrap transition-colors";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   [ButtonVariant.Primary]:
