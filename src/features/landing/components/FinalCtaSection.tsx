@@ -1,28 +1,27 @@
 import { LinkButton } from "@/components/ui/LinkButton";
-import { Photo } from "@/components/ui/Photo";
+import { Logo } from "@/components/ui/Logo";
 import { Section } from "@/components/ui/Section";
 import { Text } from "@/components/ui/Text";
 import { AppRoute } from "@/enums/route.enum";
-import { ButtonVariant, SectionTone, TextVariant } from "@/enums/ui.enum";
-import { LANDING_IMAGES } from "../data/images";
-import { IllustrationCaption } from "./IllustrationCaption";
+import { ButtonVariant, LogoVariant, SectionTone, TextVariant } from "@/enums/ui.enum";
+import { BACKGROUND_IMAGES } from "../data/images";
+import { SideImageBackground } from "./SideImageBackground";
 
 export function FinalCtaSection() {
   return (
     <Section
       tone={SectionTone.Emerald}
-      containerClassName="grid items-center gap-10 md:grid-cols-[1.2fr_1fr] lg:gap-20"
-    >
-      <figure>
-        <Photo
-          {...LANDING_IMAGES.coupleSunset}
-          sizes="(min-width: 768px) 55vw, 90vw"
-          className="aspect-16/9 rounded-card border border-gold/40"
+      className="pt-80 md:py-28"
+      background={
+        <SideImageBackground
+          src={BACKGROUND_IMAGES.finalCta}
+          imageClassName="object-[50%_8%]"
         />
-        <IllustrationCaption />
-      </figure>
-      <div>
-        <Text as="h2" variant={TextVariant.Display}>
+      }
+    >
+      <div className="md:w-1/2 md:pr-10">
+        <Logo variant={LogoVariant.MarkOnDark} className="h-20 w-auto" />
+        <Text as="h2" variant={TextVariant.Display} className="mt-6">
           Prêt à avancer vers le mariage ?
         </Text>
         <Text variant={TextVariant.BodyLg} className="mt-4 text-canvas/80">

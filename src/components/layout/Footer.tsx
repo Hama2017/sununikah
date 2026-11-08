@@ -13,6 +13,9 @@ export function Footer() {
           <Text variant={TextVariant.BodySm} className="mt-3 text-canvas/70">
             Jusqu&apos;à ce que jannah nous réunisse
           </Text>
+          <Text variant={TextVariant.BodySm} className="mt-1 text-canvas/50">
+            Photos d&apos;illustration, personnes non membres.
+          </Text>
         </div>
         <nav aria-label="Pied de page" className="flex flex-wrap gap-x-7 gap-y-3">
           {NAV_LINKS.map(({ label, href }) => (

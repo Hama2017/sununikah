@@ -3,6 +3,7 @@ export enum ButtonVariant {
   Secondary = "secondary",
   Tertiary = "tertiary",
   Inverse = "inverse",
+  OutlineOnDark = "outlineOnDark",
 }
 
 export enum TextVariant {
@@ -26,9 +27,15 @@ export enum SectionTone {
 export enum LogoVariant {
   Horizontal = "horizontal",
   HorizontalOnDark = "horizontalOnDark",
+  MarkOnDark = "markOnDark",
 }
 
 export enum PortraitState {
   Blurred = "blurred",
   Revealed = "revealed",
+}
+
+export enum BackgroundLayout {
+  Full = "full",
+  Side = "side",
 }

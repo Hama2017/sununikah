@@ -14,6 +14,8 @@ const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   [ButtonVariant.Tertiary]: "min-h-11 px-2 text-primary-soft hover:text-gold-ink",
   [ButtonVariant.Inverse]:
     "min-h-13 rounded-cta border border-gold bg-canvas px-7 text-primary hover:bg-sand",
+  [ButtonVariant.OutlineOnDark]:
+    "min-h-13 rounded-cta border border-canvas/60 px-7 text-canvas hover:bg-canvas/10",
 };
 
 type LinkButtonProps = ComponentProps<typeof Link> & {
