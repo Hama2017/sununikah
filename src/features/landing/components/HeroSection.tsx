@@ -4,7 +4,7 @@ import { Text } from "@/components/ui/Text";
 import { VerifiedBadge } from "@/components/ui/VerifiedBadge";
 import { AppRoute, LandingAnchor } from "@/enums/route.enum";
 import { ButtonVariant, TextVariant } from "@/enums/ui.enum";
-import { ProfilePreview } from "./ProfilePreview";
+import { HeroImage } from "./HeroImage";
 
 export function HeroSection() {
   return (
@@ -28,7 +28,7 @@ export function HeroSection() {
           </LinkButton>
         </div>
       </div>
-      <ProfilePreview />
+      <HeroImage />
     </Section>
   );
 }

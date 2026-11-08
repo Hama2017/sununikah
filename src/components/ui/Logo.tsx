@@ -8,7 +8,6 @@ const LOGOS: Record<LogoVariant, { src: string; width: number; height: number }>
     width: 800,
     height: 259,
   },
-  [LogoVariant.MarkOnDark]: { src: "/brand/logo-mark-on-dark.png", width: 512, height: 785 },
 };
 
 type LogoProps = {
