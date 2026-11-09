@@ -13,17 +13,18 @@ import {
   TextVariant,
 } from "@/enums/ui.enum";
 import { BACKGROUND_IMAGES } from "../data/images";
+import { FULL_PHOTO_OVERLAY } from "./heroOverlay";
 
 export function FinalCtaSection() {
   return (
     <Section
       tone={SectionTone.Emerald}
-      className="pt-80 md:py-28"
+      className="pt-80 md:py-32"
       background={
         <BackgroundPhoto
           src={BACKGROUND_IMAGES.finalCta}
-          layout={BackgroundLayout.Wide}
-          overlayClassName="bg-linear-to-b from-transparent from-55% to-primary md:bg-linear-to-r md:from-primary md:from-14% md:to-transparent md:to-32%"
+          layout={BackgroundLayout.Full}
+          overlayClassName={FULL_PHOTO_OVERLAY}
           imageClassName="object-right-top"
         />
       }

@@ -6,7 +6,6 @@ import { cn } from "@/lib/cn";
 const LAYOUT_CLASSES: Record<BackgroundLayout, string> = {
   [BackgroundLayout.Full]: "md:inset-0 md:h-auto",
   [BackgroundLayout.Side]: "md:inset-y-0 md:right-0 md:left-1/2 md:h-auto",
-  [BackgroundLayout.Wide]: "md:inset-y-0 md:right-0 md:left-[38%] md:h-auto",
 };
 
 type BackgroundPhotoProps = {
@@ -35,7 +34,7 @@ export function BackgroundPhoto({
           src={src}
           alt=""
           fill
-          sizes={layout === BackgroundLayout.Full ? "100vw" : "(min-width: 768px) 62vw, 100vw"}
+          sizes={layout === BackgroundLayout.Full ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
           preload={preload}
           className={cn("object-cover", imageClassName)}
         />
