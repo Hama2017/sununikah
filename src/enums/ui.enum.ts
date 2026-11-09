@@ -27,6 +27,7 @@ export enum SectionTone {
 export enum LogoVariant {
   Horizontal = "horizontal",
   HorizontalOnDark = "horizontalOnDark",
+  Mark = "mark",
   MarkOnDark = "markOnDark",
 }
 
