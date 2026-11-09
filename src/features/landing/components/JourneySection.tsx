@@ -16,7 +16,7 @@ export function JourneySection() {
           title="Un chemin clair, sans raccourci."
           description="Aucune étape ne peut être sautée : c'est ce qui protège chaque membre."
         />
-        <Reveal delay={0.2} className="mt-10 hidden md:block">
+        <Reveal delay={0.2} className="mt-10 hidden justify-center md:flex">
           <Logo variant={LogoVariant.Mark} className="h-60 w-auto" />
         </Reveal>
       </div>
