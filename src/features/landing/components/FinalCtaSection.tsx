@@ -14,7 +14,7 @@ export function FinalCtaSection() {
       tone={SectionTone.Emerald}
       className="pt-80 md:py-28"
       background={
-        <SideImageBackground src={BACKGROUND_IMAGES.finalCta} imageClassName="object-[50%_8%]" />
+        <SideImageBackground src={BACKGROUND_IMAGES.finalCta} imageClassName="object-[45%_0%]" />
       }
     >
       <Reveal className="md:w-1/2 md:pr-10">
