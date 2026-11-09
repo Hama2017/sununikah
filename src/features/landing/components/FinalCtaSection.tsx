@@ -1,12 +1,18 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { BackgroundPhoto } from "@/components/ui/BackgroundPhoto";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Logo } from "@/components/ui/Logo";
 import { Section } from "@/components/ui/Section";
 import { Text } from "@/components/ui/Text";
 import { AppRoute } from "@/enums/route.enum";
-import { ButtonVariant, LogoVariant, SectionTone, TextVariant } from "@/enums/ui.enum";
+import {
+  BackgroundLayout,
+  ButtonVariant,
+  LogoVariant,
+  SectionTone,
+  TextVariant,
+} from "@/enums/ui.enum";
 import { BACKGROUND_IMAGES } from "../data/images";
-import { SideImageBackground } from "./SideImageBackground";
 
 export function FinalCtaSection() {
   return (
@@ -14,7 +20,12 @@ export function FinalCtaSection() {
       tone={SectionTone.Emerald}
       className="pt-80 md:py-28"
       background={
-        <SideImageBackground src={BACKGROUND_IMAGES.finalCta} imageClassName="object-[45%_0%]" />
+        <BackgroundPhoto
+          src={BACKGROUND_IMAGES.finalCta}
+          layout={BackgroundLayout.Wide}
+          overlayClassName="bg-linear-to-b from-transparent from-55% to-primary md:bg-linear-to-r md:from-primary md:from-14% md:to-transparent md:to-32%"
+          imageClassName="object-right-top"
+        />
       }
     >
       <Reveal className="md:w-1/2 md:pr-10">

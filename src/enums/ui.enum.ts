@@ -39,4 +39,5 @@ export enum PortraitState {
 export enum BackgroundLayout {
   Full = "full",
   Side = "side",
+  Wide = "wide",
 }
