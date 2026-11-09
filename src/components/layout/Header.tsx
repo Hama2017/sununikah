@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Logo } from "@/components/ui/Logo";
@@ -31,6 +32,7 @@ export function Header() {
           <MobileMenu />
         </div>
       </Container>
+      <ScrollProgress />
     </header>
   );
 }

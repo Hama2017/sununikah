@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Reveal } from "@/components/motion/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Text } from "@/components/ui/Text";
@@ -21,8 +22,8 @@ export function PrivacySection() {
           description="Vous gardez la main sur ce qui est montré, et à qui."
         />
         <ul className="mt-9 space-y-5">
-          {PRIVACY_POINTS.map(({ title, text }) => (
-            <li key={title} className="flex gap-3">
+          {PRIVACY_POINTS.map(({ title, text }, index) => (
+            <Reveal as="li" key={title} delay={0.15 + index * 0.12} className="flex gap-3">
               <Check className="mt-0.5 size-5 shrink-0 text-gold" aria-hidden />
               <div>
                 <Text as="h3" variant={TextVariant.Title}>
@@ -30,7 +31,7 @@ export function PrivacySection() {
                 </Text>
                 <Text className="mt-1 text-canvas/75">{text}</Text>
               </div>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

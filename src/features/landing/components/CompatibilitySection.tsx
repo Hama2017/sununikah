@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
 import { Card } from "@/components/ui/Card";
 import { Chip } from "@/components/ui/Chip";
 import { Section } from "@/components/ui/Section";
@@ -15,17 +16,19 @@ export function CompatibilitySection() {
         description="Ce qui se découvre trop tard ailleurs figure ici sur chaque profil."
       />
       <div className="mt-12 grid gap-4 md:grid-cols-2">
-        {COMPATIBILITY_TOPICS.map(({ question, options, selected }) => (
-          <Card key={question}>
-            <Text as="h3" variant={TextVariant.HeadlineSm}>
-              {question}
-            </Text>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {options.map((option) => (
-                <Chip key={option} label={option} selected={option === selected} />
-              ))}
-            </div>
-          </Card>
+        {COMPATIBILITY_TOPICS.map(({ question, options, selected }, index) => (
+          <Reveal key={question} delay={index * 0.1}>
+            <Card className="h-full transition duration-500 hover:-translate-y-1 hover:border-gold">
+              <Text as="h3" variant={TextVariant.HeadlineSm}>
+                {question}
+              </Text>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {options.map((option) => (
+                  <Chip key={option} label={option} selected={option === selected} />
+                ))}
+              </div>
+            </Card>
+          </Reveal>
         ))}
       </div>
     </Section>

@@ -20,3 +20,23 @@
     }
   }
 }
+
+@layer components {
+  .button-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button-shine::after {
+    @apply absolute inset-y-0 -left-2/3 w-1/2 -skew-x-20 bg-gold-soft/40 opacity-0;
+    content: "";
+    transition:
+      left 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.2s;
+  }
+
+  .button-shine:hover::after {
+    left: 120%;
+    opacity: 1;
+  }
+}

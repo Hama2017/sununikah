@@ -14,7 +14,7 @@ export function Footer() {
             Jusqu&apos;à ce que jannah nous réunisse
           </Text>
           <Text variant={TextVariant.BodySm} className="mt-1 text-canvas/50">
-            Photos d&apos;illustration, personnes non membres.
+            Photos et exemple de profil à titre d&apos;illustration.
           </Text>
         </div>
         <nav aria-label="Pied de page" className="flex flex-wrap gap-x-7 gap-y-3">

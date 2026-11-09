@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ArchStroke } from "@/components/motion/ArchStroke";
 import { cn } from "@/lib/cn";
 
 const ARCH_PATH = "M2 418V176C2 100 92 62 160 3c68 59 158 97 158 173v242z";
@@ -20,7 +21,7 @@ export function ArchFrame({ children, className }: ArchFrameProps) {
         <clipPath id={CLIP_ID} clipPathUnits="objectBoundingBox">
           <path d={ARCH_PATH} transform="scale(0.003125 0.00238095)" />
         </clipPath>
-        <path d={ARCH_PATH} className="stroke-gold" vectorEffect="non-scaling-stroke" />
+        <ArchStroke d={ARCH_PATH} />
       </svg>
     </div>
   );

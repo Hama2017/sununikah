@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { BackgroundLayout } from "@/enums/ui.enum";
 import { cn } from "@/lib/cn";
 
@@ -24,15 +25,20 @@ export function BackgroundPhoto({
   preload,
 }: BackgroundPhotoProps) {
   return (
-    <div aria-hidden className={cn("absolute inset-x-0 top-0 h-80", LAYOUT_CLASSES[layout])}>
-      <Image
-        src={src}
-        alt=""
-        fill
-        sizes={layout === BackgroundLayout.Full ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
-        preload={preload}
-        className={cn("object-cover", imageClassName)}
-      />
+    <div
+      aria-hidden
+      className={cn("absolute inset-x-0 top-0 h-80 overflow-hidden", LAYOUT_CLASSES[layout])}
+    >
+      <ParallaxLayer>
+        <Image
+          src={src}
+          alt=""
+          fill
+          sizes={layout === BackgroundLayout.Full ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+          preload={preload}
+          className={cn("object-cover", imageClassName)}
+        />
+      </ParallaxLayer>
       <div className={cn("absolute inset-0", overlayClassName)} />
     </div>
   );

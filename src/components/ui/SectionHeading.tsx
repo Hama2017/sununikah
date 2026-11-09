@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
 import { TextVariant } from "@/enums/ui.enum";
 import { cn } from "@/lib/cn";
 import { Text } from "./Text";
@@ -18,7 +19,7 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <header className={cn("max-w-160", className)}>
+    <Reveal className={cn("max-w-160", className)}>
       <Text variant={TextVariant.Eyebrow} className={onDark ? "text-gold-soft" : "text-gold-ink"}>
         {eyebrow}
       </Text>
@@ -33,6 +34,6 @@ export function SectionHeading({
           {description}
         </Text>
       )}
-    </header>
+    </Reveal>
   );
 }

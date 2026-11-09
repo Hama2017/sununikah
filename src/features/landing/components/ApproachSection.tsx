@@ -13,8 +13,8 @@ export function ApproachSection() {
         description="Ici, chaque rapprochement repose sur ce qui compte vraiment pour construire un foyer."
       />
       <ul className="mt-12 grid gap-x-16 md:grid-cols-2">
-        {PRINCIPLES.map((principle) => (
-          <PrincipleItem key={principle.title} {...principle} />
+        {PRINCIPLES.map((principle, index) => (
+          <PrincipleItem key={principle.title} {...principle} delay={index * 0.1} />
         ))}
       </ul>
     </Section>

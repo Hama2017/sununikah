@@ -1,3 +1,4 @@
+import { ScrollLine } from "@/components/motion/ScrollLine";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { JOURNEY_STEPS } from "../data/journey";
@@ -12,7 +13,8 @@ export function JourneySection() {
         description="Aucune étape ne peut être sautée : c'est ce qui protège chaque membre."
         className="md:sticky md:top-28 md:self-start"
       />
-      <ol>
+      <ol className="relative">
+        <ScrollLine />
         {JOURNEY_STEPS.map((step, index) => (
           <JourneyStep key={step.title} {...step} position={index + 1} />
         ))}

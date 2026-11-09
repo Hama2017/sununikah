@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Logo } from "@/components/ui/Logo";
 import { Section } from "@/components/ui/Section";
@@ -13,13 +14,10 @@ export function FinalCtaSection() {
       tone={SectionTone.Emerald}
       className="pt-80 md:py-28"
       background={
-        <SideImageBackground
-          src={BACKGROUND_IMAGES.finalCta}
-          imageClassName="object-[50%_8%]"
-        />
+        <SideImageBackground src={BACKGROUND_IMAGES.finalCta} imageClassName="object-[50%_8%]" />
       }
     >
-      <div className="md:w-1/2 md:pr-10">
+      <Reveal className="md:w-1/2 md:pr-10">
         <Logo variant={LogoVariant.MarkOnDark} className="h-20 w-auto" />
         <Text as="h2" variant={TextVariant.Display} className="mt-6">
           Prêt à avancer vers le mariage ?
@@ -30,7 +28,7 @@ export function FinalCtaSection() {
         <LinkButton href={AppRoute.SignUp} variant={ButtonVariant.Inverse} className="mt-9">
           Créer mon profil
         </LinkButton>
-      </div>
+      </Reveal>
     </Section>
   );
 }

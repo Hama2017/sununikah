@@ -7,7 +7,7 @@ import { PortraitState, TextVariant } from "@/enums/ui.enum";
 
 export function ProfilePreview() {
   return (
-    <figure className="mx-auto w-full max-w-80">
+    <div className="mx-auto w-full max-w-80">
       <ArchFrame>
         <div className="flex h-full flex-col items-center justify-end bg-sand px-5 pb-6 text-center text-primary-deep">
           <Portrait state={PortraitState.Blurred} className="size-28" />
@@ -29,9 +29,6 @@ export function ProfilePreview() {
           </div>
         </div>
       </ArchFrame>
-      <Text as="figcaption" variant={TextVariant.BodySm} className="mx-auto mt-3 w-fit rounded-full bg-primary-deep/80 px-3 py-1 text-center text-canvas">
-        Exemple de profil, à titre d&apos;illustration
-      </Text>
-    </figure>
+    </div>
   );
 }
