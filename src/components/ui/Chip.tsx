@@ -9,10 +9,8 @@ export function Chip({ label, selected = false }: ChipProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border px-3.5 py-1.5 text-body-sm",
-        selected
-          ? "border-gold bg-primary text-canvas"
-          : "border-line bg-sand text-primary-soft",
+        "inline-flex items-center rounded-full px-3.5 py-1.5 text-body-sm",
+        selected ? "bg-primary text-canvas" : "bg-primary/10 text-primary-soft",
       )}
     >
       {label}

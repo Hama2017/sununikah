@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Portrait } from "@/components/ui/Portrait";
 import { Text } from "@/components/ui/Text";
 import { PortraitState, TextVariant } from "@/enums/ui.enum";
+import { PROFILE_PORTRAIT } from "../data/images";
 
 const STAGES = [
   { state: PortraitState.Blurred, title: "Avant", text: "Photo floutée pour tous" },
@@ -18,10 +19,10 @@ export function PhotoReveal() {
           <Card className="flex flex-col items-center text-center text-primary-deep">
             {state === PortraitState.Revealed ? (
               <BlurDissolve>
-                <Portrait state={state} className="size-24 md:size-32" />
+                <Portrait src={PROFILE_PORTRAIT} state={state} className="size-24 md:size-32" />
               </BlurDissolve>
             ) : (
-              <Portrait state={state} className="size-24 md:size-32" />
+              <Portrait src={PROFILE_PORTRAIT} state={state} className="size-24 md:size-32" />
             )}
             <Text as="h3" variant={TextVariant.HeadlineSm} className="mt-5">
               {title}

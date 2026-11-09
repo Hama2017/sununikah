@@ -20,6 +20,11 @@ export const FAQ_ITEMS = [
       "Un profil complet garantit le sérieux de chacun. Tant qu'il ne l'est pas, le catalogue, la messagerie et les favoris restent fermés.",
   },
   {
+    question: "Pourquoi faut-il un abonnement pour matcher ?",
+    answer:
+      "Il finance les modérateurs qui encadrent les discussions et veillent sur la plateforme, afin que chaque échange reste respectueux.",
+  },
+  {
     question: "Que se passe-t-il après l'inscription ?",
     answer:
       "Votre profil passe « En attente de validation » le temps que votre biographie et vos photos soient examinées.",

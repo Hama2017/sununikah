@@ -8,5 +8,6 @@ export enum LandingAnchor {
   Approach = "#approche",
   Privacy = "#confidentialite",
   Journey = "#parcours",
+  Pricing = "#formules",
   Faq = "#faq",
 }
