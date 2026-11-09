@@ -16,7 +16,7 @@ export function ProfilePreview() {
             <VerifiedBadge label="Profil validé" />
           </div>
           <Text as="p" variant={TextVariant.HeadlineMd} className="mt-3">
-            M., 27 ans
+            Madame BA, 27 ans
           </Text>
           <Text variant={TextVariant.BodySm} className="text-muted">
             Sénégal · Ville masquée
